@@ -4,7 +4,7 @@ import esbuild from "esbuild";
 import isCI from "is-ci";
 import pkg from "./package.json" with { type: "json" };
 
-const peerDependencies = Object.values(pkg.peerDependencies);
+const peerDependencies = Object.keys(pkg.peerDependencies);
 const externalDependencies = pkg.externalDependencies;
 
 /**
