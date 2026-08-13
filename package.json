@@ -1,0 +1,87 @@
+{
+  "name": "@forsakringskassan/vue-config",
+  "version": "0.0.0",
+  "description": "Shared configuration for building Vue.js applications",
+  "keywords": [
+    "vue"
+  ],
+  "homepage": "https://github.com/Forsakringskassan/vue-config#readme",
+  "bugs": {
+    "url": "https://github.com/Forsakringskassan/vue-config/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Forsakringskassan/vue-config.git"
+  },
+  "license": "MIT",
+  "author": "Försäkringskassan",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/index.mjs"
+    }
+  },
+  "main": "./dist/esm/index.mjs",
+  "types": "./dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prebuild": "tsc",
+    "build": "node build.mjs",
+    "eslint": "eslint --cache .",
+    "eslint:fix": "eslint --fix .",
+    "prepack": "release-prepack --bundle",
+    "postpack": "release-postpack",
+    "prepare": "commitlint-config",
+    "prepublishOnly": "release-prepublish --bundle",
+    "prettier:check": "prettier --check .",
+    "prettier:write": "prettier --write .",
+    "pretest": "npm run prettier:check && npm run eslint",
+    "test": "vitest run"
+  },
+  "commitlint": {
+    "extends": "@forsakringskassan/commitlint-config/no-jira"
+  },
+  "prettier": "@forsakringskassan/prettier-config",
+  "release": {
+    "extends": "@forsakringskassan/semantic-release-config"
+  },
+  "devDependencies": {
+    "@forsakringskassan/commitlint-config": "4.2.7",
+    "@forsakringskassan/eslint-config": "15.8.0",
+    "@forsakringskassan/eslint-config-cli": "15.8.1",
+    "@forsakringskassan/eslint-config-typescript": "15.8.0",
+    "@forsakringskassan/eslint-config-typescript-typeinfo": "15.8.0",
+    "@forsakringskassan/eslint-config-vitest": "15.8.0",
+    "@forsakringskassan/prettier-config": "3.7.8",
+    "@forsakringskassan/vitest-config": "2.6.0",
+    "@html-validate/release-scripts": "7.6.0",
+    "@microsoft/api-extractor": "7.58.12",
+    "@tsconfig/node22": "22.0.5",
+    "@tsconfig/recommended": "1.0.13",
+    "@tsconfig/strictest": "2.0.8",
+    "@types/node": "22.20.1",
+    "@typescript/native": "npm:typescript@7.0.2",
+    "esbuild": "0.28.2",
+    "is-ci": "4.1.0",
+    "npm-pkg-lint": "5.2.2",
+    "typescript": "npm:@typescript/typescript6@6.0.2",
+    "vite": "8.2.1",
+    "vitest": "4.1.10"
+  },
+  "peerDependencies": {
+    "vite": "^8.0.4",
+    "vue": "^3.0.0"
+  },
+  "engines": {
+    "node": "^22.12.0 || >= 24",
+    "npm": ">= 11.0.0"
+  },
+  "allowScripts": {
+    "esbuild": true,
+    "unrs-resolver": true
+  },
+  "externalDependencies": []
+}

@@ -1,0 +1,15 @@
+{
+    "extends": [
+        "@tsconfig/recommended",
+        "@tsconfig/node22",
+        "@tsconfig/strictest"
+    ],
+    "compilerOptions": {
+        "rootDir": "./src",
+        "emitDeclarationOnly": true,
+        "declaration": true,
+        "declarationDir": "./temp/types",
+        "types": ["node"]
+    },
+    "include": ["src/**/*.ts"]
+}

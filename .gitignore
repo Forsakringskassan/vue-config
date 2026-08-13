@@ -1,0 +1,10 @@
+.eslintcache
+*.tgz
+*.zip
+node_modules/
+
+# Build artifacts
+coverage/
+dist/
+temp/
+test-results/

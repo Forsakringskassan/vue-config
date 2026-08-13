@@ -1,0 +1,22 @@
+name: Release
+concurrency: release-${{ github.ref }}
+
+on:
+    push:
+        branches:
+            - main
+
+permissions:
+    contents: write
+    issues: write
+    pull-requests: write
+    id-token: write
+
+jobs:
+    release:
+        name: Release
+        uses: Forsakringskassan/.github/.github/workflows/npm-release.yaml@main
+        with:
+            app-id: ${{ vars.RELEASE_APP_ID }}
+        secrets:
+            app-key: ${{ secrets.RELEASE_APP_KEY }}
