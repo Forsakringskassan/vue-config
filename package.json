@@ -15,7 +15,6 @@
   },
   "license": "MIT",
   "author": "Försäkringskassan",
-  "type": "module",
   "exports": {
     ".": {
       "types": "./dist/types/index.d.ts",
@@ -63,10 +62,13 @@
     "@tsconfig/recommended": "1.0.13",
     "@tsconfig/strictest": "2.0.8",
     "@types/node": "22.20.1",
+    "@types/stream-buffers": "3.0.8",
     "@typescript/native": "npm:typescript@7.0.2",
     "esbuild": "0.28.2",
     "is-ci": "4.1.0",
     "npm-pkg-lint": "5.2.2",
+    "pretty-ansi": "4.0.0",
+    "stream-buffers": "3.0.3",
     "typescript": "npm:@typescript/typescript6@6.0.2",
     "vite": "8.2.1",
     "vitest": "4.1.10"

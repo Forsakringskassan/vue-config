@@ -1,1 +1,1 @@
-export {};
+export { type PrintConfigOptions, printConfigurationPlugin } from "./plugins";

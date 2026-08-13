@@ -4,6 +4,35 @@
 
 ```ts
 
+import { Plugin } from 'vite';
+import { ProxyOptions } from 'vite';
+
+// @public (undocumented)
+export interface PrintConfigOptions {
+    // (undocumented)
+    mode: string;
+    // (undocumented)
+    proxySettings: {
+        proxy?: Record<string, ProxyOptions>;
+        local?: Array<{
+            url: string;
+            dir: string;
+        }>;
+    };
+    // (undocumented)
+    sourceMaps: boolean;
+    // (undocumented)
+    useProxy: boolean;
+    // (undocumented)
+    userConfigured: string | null;
+}
+
+// @public (undocumented)
+export function printConfigurationPlugin(pkg: {
+    name: string;
+    version: string;
+}, options: PrintConfigOptions): Plugin;
+
 // (No @packageDocumentation comment for this package)
 
 ```
