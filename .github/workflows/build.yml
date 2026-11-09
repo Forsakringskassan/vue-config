@@ -20,7 +20,7 @@ jobs:
             - name: Install dependencies
               run: npm ci
             - name: Vitest
-              uses: Forsakringskassan/vitest-config@ad1b62a56aab1165f60d27e5ae6b64c0baaedaf9 # v5.0.2
+              uses: Forsakringskassan/vitest-config@377b52787267326aadb6f3e84cd0c00241f38ef7 # v5.1.0
             - name: Build
               run: npm run --if-present build
 
@@ -42,4 +42,4 @@ jobs:
             - name: Install Vite ${{ matrix.vite-version }}
               run: npm install --no-save $(npx -y npm-min-peer vite --major ${{ matrix.vite-version }} --with-name)
             - name: Vitest
-              uses: Forsakringskassan/vitest-config@ad1b62a56aab1165f60d27e5ae6b64c0baaedaf9 # v5.0.2
+              uses: Forsakringskassan/vitest-config@377b52787267326aadb6f3e84cd0c00241f38ef7 # v5.1.0
