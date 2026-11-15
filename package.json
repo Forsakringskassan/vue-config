@@ -64,7 +64,7 @@
     "@microsoft/api-extractor": "7.60.1",
     "@tsconfig/node22": "22.0.7",
     "@tsconfig/recommended": "1.0.14",
-    "@tsconfig/strictest": "2.0.8",
+    "@tsconfig/strictest": "2.0.9",
     "@types/node": "22.20.5",
     "@types/stream-buffers": "3.0.8",
     "@typescript/native": "npm:typescript@7.0.2",
