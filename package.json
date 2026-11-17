@@ -60,7 +60,7 @@
     "@forsakringskassan/eslint-config-vitest": "15.13.7",
     "@forsakringskassan/prettier-config": "3.7.15",
     "@forsakringskassan/vitest-config": "5.1.0",
-    "@html-validate/release-scripts": "7.6.17",
+    "@html-validate/release-scripts": "7.6.20",
     "@microsoft/api-extractor": "7.60.1",
     "@tsconfig/node22": "22.0.7",
     "@tsconfig/recommended": "1.0.14",
